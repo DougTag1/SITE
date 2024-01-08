@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0; /* Set the background color as needed */
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .game-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #ffffff; /* White background color */
+      border: none;
+      text-decoration: none;
+      font-size: 18px;
+      color: #000000; /* Text color */
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 10px;
+      background-image: url('site/main/background.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s ease; /* Add a smooth transition effect on transform property */
+    }
+
+    .game-button:hover {
+      background-color: #e0e0e0; /* Change the background color on hover if desired */
+      transform: scale(1.1); /* Increase the size on hover */
+    }
+  </style>
+  <title>Doug Tag</title>
+</head>
+<body>
+
+<div class="container">
+  <a href="https://sidequestvr.com/app/28375/dougtag" target="_blank" class="game-button" id="playButton">
+    Play Now
+  </a>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const playButton = document.getElementById("playButton");
+
+    // Add an event listener for mouseover (hover) to trigger the animation
+    playButton.addEventListener("mouseover", function () {
+      playButton.style.transform = "scale(1.1)"; // Increase the size on hover
+    });
+
+    // Add an event listener for mouseout (mouseleave) to reset the animation
+    playButton.addEventListener("mouseout", function () {
+      playButton.style.transform = "scale(1)"; // Reset to the original size
+    });
+  });
+</script>
+</body>
+</html>
